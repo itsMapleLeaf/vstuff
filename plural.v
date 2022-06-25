@@ -1,9 +1,17 @@
 module main
 
-pub fn plural(count int, word string, plural_word string) string {
-	return if count == 1 { word } else { plural_word }
+struct Plural {
+	count       int    [required]
+	word        string [required]
+	plural_word string
 }
 
-pub fn plural_s(count int, word string) string {
-	return plural(count, word, word + 's')
+fn (p Plural) str() string {
+	return if p.count == 1 {
+		p.word
+	} else if p.plural_word != '' {
+		p.plural_word
+	} else {
+		p.word + 's'
+	}
 }

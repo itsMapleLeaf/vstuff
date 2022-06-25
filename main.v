@@ -9,7 +9,7 @@ const min = 1
 const max = 100
 
 fn main() {
-	number := rand.int_in_range(min, max + 1)?
+	number := 25 // rand.int_in_range(min, max + 1)?
 	mut guess_count := 0
 
 	for {
@@ -32,5 +32,5 @@ fn main() {
 		}
 	}
 
-	println('Nice, you got it in $guess_count ${plural(guess_count, 'guess', 'guesses')}.')
+	println('Nice, you got it in $guess_count ${Plural{guess_count, 'guess', 'guesses'}}.')
 }
