@@ -9,7 +9,7 @@ const min = 1
 const max = 100
 
 fn main() {
-	number := 25 // rand.int_in_range(min, max + 1)?
+	number := rand.int_in_range(min, max + 1)?
 	mut guess_count := 0
 
 	for {
